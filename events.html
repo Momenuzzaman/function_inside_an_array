@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event management Company</title>
+</head>
+<body>
+    <h1>Exploring Events</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. A amet dolorem similique, quo molestias deleniti et ad iste dicta quia minus eaque sequi aperiam doloribus autem harum asperiores? Voluptate, qui?</p>
+    <button onclick="handelClick()">Click Me-1</button>
+    <button id="second_button">Click Me-2</button>
+    <button>Click Me-3</button>
+    <button id="lastButton">Click Me-4</button>
+
+    <script>
+        function handelClick(){
+            console.log("Click ME");
+        }
+
+        function secondButton(){
+            document.body.style.background ="cyan";
+        }
+        var second_button = document.getElementById("second_button");
+            second_button.onclick = secondButton;
+
+        document.getElementById("lastButton").addEventListener("click", function(){document.body.style.color="tomato";})
+    </script>
+</body>
+</html>
